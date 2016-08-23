@@ -15,8 +15,10 @@
 #
 #  ---------------------------------------------------------------------------
 
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-  . `brew --prefix`/etc/bash_completion
+if [ -d `brew --prefix`/etc/bash_completion.d ]; then
+  for file in `brew --prefix`/etc/bash_completion.d/* ; do
+    . "$file"
+  done
 fi
 
 if [ -f ~/.bash_aliases ]; then
@@ -55,15 +57,10 @@ unset file;
 export NVM_DIR="${HOME}/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-if [ -f ~/.git_auto_complete ]; then
- source ~/.git_auto_complete
-fi
-
-
 #   Set Paths
 #   ------------------------------------------------------------
   export PATH="$PATH:/usr/local/bin/"
-  export PATH="/usr/local/git/bin:/sw/bin/:/usr/local/bin:/usr/local/:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
+  export PATH="/sw/bin/:/usr/local/bin:/usr/local/:/usr/local/sbin:$PATH"
 
 #   Set Default Editor (change 'Nano' to the editor of your choice)
 #   ------------------------------------------------------------
