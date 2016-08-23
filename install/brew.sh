@@ -41,9 +41,6 @@ brew upgrade --all
 # which version I'm using.
 
 apps=(
-    nvm
-    nginx
-    bash-completion2
     coreutils
     moreutils
     findutils
@@ -60,7 +57,6 @@ apps=(
     source-highlight
     the_silver_searcher
     tree
-    wget
     wifi-password
 )
 
