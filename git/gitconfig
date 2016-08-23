@@ -36,6 +36,9 @@
         dc = diff --cached
         df = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
 
+        #Fetch
+        fa = fetch --all
+        
         # Merge
         m = merge
 
