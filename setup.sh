@@ -163,7 +163,7 @@ declare -a FILES_TO_SYMLINK=(
 
   'shell/ackrc'
   'shell/curlrc'
- 
+
   'shell/inputrc'
 
   'git/gitattributes'
@@ -212,17 +212,6 @@ main() {
 
   done
 
-  # Symlink online-check.sh
-  ln -fs $HOME/$dir/lib/online-check.sh $HOME/online-check.sh
-
-  # Write out current crontab
-  crontab -l > mycron
-  # Echo new cron into cron file
-  echo "* * * * * ~/online-check.sh" >> mycron
-  # Install new cron file
-  crontab mycron
-  rm mycron
-
 }
 
 
@@ -262,4 +251,3 @@ open "${HOME}/${dir}/iterm/themes/Solarized Dark.itermcolors"
 
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
-
