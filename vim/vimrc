@@ -1,0 +1,41 @@
+" Plugins
+set nocompatible              " be iMproved, required
+filetype off                  " required
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'airblade/vim-gitgutter'
+"JS Development
+Plugin 'mxw/vim-jsx'
+Plugin 'scrooloose/syntastic'
+call vundle#end()
+filetype plugin indent on
+
+" Theme options
+syntax enable
+set background=dark
+colorscheme solarized
+let g:airline_powerline_fonts=1
+let g:airline_theme='solarized'
+
+" Syntax
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+let g:syntastic_javascript_checkers = ['eslint']
+
+" General Options
+set number
+
+if filereadable(glob("~/.vimrc.local"))
+    source ~/.vimrc.local
+endif

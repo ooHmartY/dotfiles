@@ -160,16 +160,15 @@ declare -a FILES_TO_SYMLINK=(
   'shell/bash_profile'
   'shell/bash_prompt'
   'shell/bashrc'
-
   'shell/ackrc'
   'shell/curlrc'
-
   'shell/inputrc'
 
   'git/gitattributes'
   'git/gitconfig'
   'git/gitignore'
 
+  'vim/vimrc'
 )
 
 # FILES_TO_SYMLINK="$FILES_TO_SYMLINK .vim bin" # add in vim and the binaries
