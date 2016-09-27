@@ -3,7 +3,7 @@
   core:
     themes: [
       "one-dark-ui"
-      "cobalt2-syntax"
+      "solarized-dark-syntax"
     ]
   editor:
     fontFamily: "Menlo"
@@ -12,10 +12,10 @@
       cr: " "
       eol: " "
       tab: "⇨"
-    preferredLineLength: 120
+    preferredLineLength: 80
+    showIndentGuide: true
     showInvisibles: true
     softWrap: true
-    softWrapAtPreferredLineLength: true
   emmet: {}
   "exception-reporting":
     userId: "0f4e16a3-5040-01ba-b000-a0793a69fb44"
