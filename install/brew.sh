@@ -55,9 +55,7 @@ apps=(
     autojump
     python
     source-highlight
-    the_silver_searcher
     tree
-    wifi-password
 )
 
 brew install "${apps[@]}"
